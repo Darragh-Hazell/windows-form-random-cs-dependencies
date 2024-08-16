@@ -56,6 +56,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.customDll = new System.Windows.Forms.Label();
+            this.customDllBox = new System.Windows.Forms.TextBox();
+            this.customDllOutput = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.buttonAddTwo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // GENERATE
@@ -300,11 +305,62 @@
             this.label7.Text = "Any non-entered inputs are treated as 0";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // customDll
+            // 
+            this.customDll.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customDll.Location = new System.Drawing.Point(15, 293);
+            this.customDll.Name = "customDll";
+            this.customDll.Size = new System.Drawing.Size(259, 23);
+            this.customDll.TabIndex = 28;
+            this.customDll.Text = "Custom DLL (Add 2)";
+            this.customDll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // customDllBox
+            // 
+            this.customDllBox.Location = new System.Drawing.Point(19, 329);
+            this.customDllBox.Name = "customDllBox";
+            this.customDllBox.Size = new System.Drawing.Size(255, 20);
+            this.customDllBox.TabIndex = 29;
+            this.customDllBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // customDllOutput
+            // 
+            this.customDllOutput.Location = new System.Drawing.Point(281, 377);
+            this.customDllOutput.Name = "customDllOutput";
+            this.customDllOutput.ReadOnly = true;
+            this.customDllOutput.Size = new System.Drawing.Size(255, 20);
+            this.customDllOutput.TabIndex = 30;
+            this.customDllOutput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(281, 327);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(255, 23);
+            this.label8.TabIndex = 31;
+            this.label8.Text = "Output:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonAddTwo
+            // 
+            this.buttonAddTwo.Location = new System.Drawing.Point(19, 374);
+            this.buttonAddTwo.Name = "buttonAddTwo";
+            this.buttonAddTwo.Size = new System.Drawing.Size(255, 23);
+            this.buttonAddTwo.TabIndex = 32;
+            this.buttonAddTwo.Text = "ADD 2";
+            this.buttonAddTwo.UseVisualStyleBackColor = true;
+            this.buttonAddTwo.Click += new System.EventHandler(this.buttonAddTwo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(813, 294);
+            this.ClientSize = new System.Drawing.Size(813, 409);
+            this.Controls.Add(this.buttonAddTwo);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.customDllOutput);
+            this.Controls.Add(this.customDllBox);
+            this.Controls.Add(this.customDll);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -370,6 +426,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label customDll;
+        private System.Windows.Forms.TextBox customDllBox;
+        private System.Windows.Forms.TextBox customDllOutput;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button buttonAddTwo;
     }
 }
 

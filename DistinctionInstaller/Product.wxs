@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="DistinctionInstaller" Language="1033" Version="1.0.0.0" Manufacturer="Darragh Hazell" UpgradeCode="0b00e0e0-9861-4255-8651-b782bee7d5f8">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes"/>
+
+		<Feature Id="ProductFeature" Title="DistinctionInstaller" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="DistinctionInstaller" />
+			</Directory>
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <Component Id="Distinction.exe" Guid="2AED725B-00FB-4956-942D-DFC25892C5FA">
+        <File Id="Distinction.exe" Name="Distinction.exe" Source="$(var.Distinction.TargetDir)Distinction.exe"></File>
+			</Component>
+      <Component Id="StringMath.dll" Guid="B8A70886-6D2C-4B35-AC67-934D697816D6">
+        <File Id="StringMath.dll" Name="StringMath.dll" Source="$(var.Distinction.TargetDir)StringMath.dll"></File>
+      </Component>
+      <Component Id="MathNet.Numerics.dll" Guid="674CB2ED-D2A5-4068-9F07-E6A22CF50D5B">
+        <File Id="MathNet.Numerics.dll" Name="MathNet.Numerics.dll" Source="$(var.Distinction.TargetDir)MathNet.Numerics.dll"></File>
+      </Component>
+      <Component Id="baconipsum.dll" Guid="C8F3D287-E9F3-46A2-9373-F34519B3C651">
+        <File Id="baconipsum.dll" Name="baconipsum.dll" Source="$(var.Distinction.TargetDir)baconipsum.dll"></File>
+      </Component>
+      <Component Id="PointlessMaths.dll" Guid="730E7DAF-82E6-4B79-9E31-D1DAF6EA60B8">
+        <File Id="PointlessMaths.dll" Name="PointlessMaths.dll" Source="$(var.Distinction.TargetDir)PointlessMaths.dll"></File>
+      </Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>

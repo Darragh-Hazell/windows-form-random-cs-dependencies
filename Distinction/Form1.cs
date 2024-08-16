@@ -11,6 +11,7 @@ using StringMath;
 using baconipsum;
 using MathNet.Numerics.LinearAlgebra;
 using MathNet.Numerics.LinearAlgebra.Double;
+using PointlessMaths;
 
 namespace Distinction
 {
@@ -67,6 +68,12 @@ namespace Distinction
             matrixR_01.Text = Convert.ToString(result.Storage.At(0, 1));
             matrixR_10.Text = Convert.ToString(result.Storage.At(1, 0));
             matrixR_11.Text = Convert.ToString(result.Storage.At(1, 1));
+        }
+
+        private void buttonAddTwo_Click(object sender, EventArgs e)
+        {
+            double input = inputToNumber(customDllBox);
+            customDllOutput.Text = Convert.ToString(Mathematical.AddTwoDouble(input));
         }
     }
 }
